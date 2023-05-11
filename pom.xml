@@ -16,7 +16,14 @@
     <maven.deploy.skip>true</maven.deploy.skip>
   </properties>
   <modules>
+    <module>doodle-pipeline-agent</module>
+    <module>doodle-pipeline-agent-core</module>
+    <module>doodle-pipeline-autoconfigure</module>
+    <module>doodle-pipeline-client-core</module>
     <module>doodle-pipeline-dependencies</module>
     <module>doodle-pipeline-parent</module>
+    <module>doodle-pipeline-server</module>
+    <module>doodle-pipeline-server-core</module>
+    <module>doodle-pipeline-starters</module>
   </modules>
 </project>
