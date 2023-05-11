@@ -1,0 +1,3 @@
+org.doodle.pipeline.autoconfigure.agent.PipelineAgentAutoConfiguration
+org.doodle.pipeline.autoconfigure.agent.PipelineClientAutoConfiguration
+org.doodle.pipeline.autoconfigure.agent.PipelineServerAutoConfiguration
