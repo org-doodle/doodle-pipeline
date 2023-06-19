@@ -25,5 +25,7 @@
     <module>doodle-pipeline-server</module>
     <module>doodle-pipeline-server-core</module>
     <module>doodle-pipeline-starters</module>
+    <module>doodle-pipeline-vaadin</module>
+    <module>doodle-pipeline-vaadin-core</module>
   </modules>
 </project>

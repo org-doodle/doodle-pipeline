@@ -37,6 +37,11 @@
       </dependency>
       <dependency>
         <groupId>org.doodle</groupId>
+        <artifactId>doodle-pipeline-vaadin-core</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.doodle</groupId>
         <artifactId>doodle-pipeline-starter-agent</artifactId>
         <version>${project.version}</version>
       </dependency>
@@ -48,6 +53,11 @@
       <dependency>
         <groupId>org.doodle</groupId>
         <artifactId>doodle-pipeline-starter-server</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.doodle</groupId>
+        <artifactId>doodle-pipeline-starter-vaadin</artifactId>
         <version>${project.version}</version>
       </dependency>
     </dependencies>

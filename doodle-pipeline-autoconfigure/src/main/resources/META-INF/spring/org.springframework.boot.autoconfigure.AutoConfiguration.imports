@@ -1,3 +1,4 @@
 org.doodle.pipeline.autoconfigure.agent.PipelineAgentAutoConfiguration
-org.doodle.pipeline.autoconfigure.agent.PipelineClientAutoConfiguration
-org.doodle.pipeline.autoconfigure.agent.PipelineServerAutoConfiguration
+org.doodle.pipeline.autoconfigure.client.PipelineClientAutoConfiguration
+org.doodle.pipeline.autoconfigure.server.PipelineServerAutoConfiguration
+org.doodle.pipeline.autoconfigure.vaadin.PipelineVaadinAutoConfiguration
