@@ -15,12 +15,27 @@
  */
 package org.doodle.pipeline.autoconfigure.vaadin;
 
+import com.vaadin.flow.component.icon.VaadinIcon;
+import com.vaadin.flow.component.tabs.Tab;
+import com.vaadin.flow.router.RouterLink;
+import org.doodle.boot.vaadin.EnableVaadin;
+import org.doodle.boot.vaadin.views.TabSupplier;
 import org.doodle.pipeline.vaadin.PipelineVaadinProperties;
+import org.doodle.pipeline.vaadin.views.PipelineVaadinView;
 import org.springframework.boot.autoconfigure.AutoConfiguration;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
+import org.springframework.context.annotation.Bean;
 
 @AutoConfiguration
 @ConditionalOnClass(PipelineVaadinProperties.class)
 @EnableConfigurationProperties(PipelineVaadinProperties.class)
-public class PipelineVaadinAutoConfiguration {}
+@EnableVaadin(PipelineVaadinProperties.PREFIX_VIEWS)
+public class PipelineVaadinAutoConfiguration {
+
+  @Bean
+  public TabSupplier pipelineTabView() {
+    return (authenticationContext) ->
+        new Tab(VaadinIcon.BOMB.create(), new RouterLink("CI/CD", PipelineVaadinView.class));
+  }
+}

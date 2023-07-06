@@ -13,18 +13,15 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.doodle.pipeline.vaadin;
+package org.doodle.pipeline.vaadin.views;
 
-import lombok.AccessLevel;
-import lombok.Data;
-import lombok.experimental.FieldDefaults;
-import org.springframework.boot.context.properties.ConfigurationProperties;
+import com.vaadin.flow.component.orderedlayout.VerticalLayout;
+import com.vaadin.flow.router.PageTitle;
+import com.vaadin.flow.router.Route;
+import jakarta.annotation.security.RolesAllowed;
+import org.doodle.boot.vaadin.views.MainLayout;
 
-@Data
-@FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
-@ConfigurationProperties(prefix = PipelineVaadinProperties.PREFIX)
-public class PipelineVaadinProperties {
-  public static final String PREFIX = "doodle.pipeline.vaadin";
-
-  public static final String PREFIX_VIEWS = "org.doodle.pipeline.vaadin.views";
-}
+@RolesAllowed("PIPELINE_ADMIN")
+@PageTitle("Pipeline")
+@Route(value = "pipeline", layout = MainLayout.class)
+public class PipelineVaadinView extends VerticalLayout {}
